@@ -1,2 +1,2 @@
 # blogs
-The blogs section of the HabsMUN 2025 website: https://habsmun.com
+The blogs section of the HabsMUN 2026 website: https://habsmun.com
