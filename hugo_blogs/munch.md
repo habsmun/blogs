@@ -1,6 +1,6 @@
 ---
 title: "Habs delegates at MUNCH"
-date: 2026-02-18
+date: 2025-10-06
 draft: false
 description: "Habs Elstree students attend Cheadle Hulme School's Model United Nations conference."
 ---
