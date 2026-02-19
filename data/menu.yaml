@@ -1,14 +1,11 @@
-- name: Home
+- item: Home
   url: /
-  weight: 1
 
-- name: Posts
+- item: Posts
   url: /posts/
-  weight: 2
 
-- name: About
+- item: About
   url: /about/
-  weight: 3
-- name: Back to HabsMUN
+
+- item: Back to HabsMUN
   url: https://habsmun.com/
-  weight: 3
