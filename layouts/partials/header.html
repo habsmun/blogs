@@ -4,27 +4,25 @@
       <div class="header-inner">
         <a class="header-logo" href="{{ .Site.Home.Permalink }}">
           {{ if .Site.Params.logo }}
-            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="height: 40px; width: auto;">
+            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="height: 40px; width: auto; display: block;">
           {{ else }}
             {{ .Site.Title }}
           {{ end }}
         </a>
-        
+
         <div class="header-links">
           {{ range .Site.Menus.main }}
             <a href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
         </div>
-        
+
         <div class="header-menu-mobile">
-          {{/* Mobile menu toggle - hidden by default on desktop via CSS */}}
-          <button class="header-menu-mobile-toggle" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false">
+          <button id="mobile-menu-toggle" class="header-menu-mobile-toggle" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
           </button>
-          
-          <div class="header-menu-mobile-content" id="mobile-menu">
+          <div id="mobile-menu" class="header-menu-mobile-content">
             {{ range .Site.Menus.main }}
               <a href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
@@ -34,3 +32,23 @@
     </div>
   </div>
 </header>
+
+<script>
+  // Simple script to toggle mobile menu
+  document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('mobile-menu');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    menu.style.display = expanded ? 'none' : 'flex';
+  });
+</script>
+
+<style>
+  /* Ensure mobile menu is hidden by default on desktop */
+  #mobile-menu { display: none; flex-direction: column; position: absolute; top: 60px; right: 20px; background: white; border: 1px solid #eee; padding: 10px; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  #mobile-menu a { padding: 10px 20px; display: block; }
+  
+  @media (min-width: 768px) {
+    .header-menu-mobile { display: none; }
+  }
+</style>
