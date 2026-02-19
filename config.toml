@@ -1,0 +1,10 @@
+baseURL = "https://blogs.habsmun.com/"
+languageCode = "en-gb"
+title = "HABSMUN Blogs"
+theme = "newsroom"
+
+[params]
+  description = "Official blogs from HABSMUN conferences"
+
+[markup.goldmark.renderer]
+  unsafe = true
