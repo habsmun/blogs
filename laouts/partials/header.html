@@ -1,0 +1,89 @@
+<header class="header">
+  <div class="container">
+    <div class="header-main" style="display: flex; justify-content: space-between; align-items: center;">
+      
+      {{/* Logo Section */}}
+      <div class="header-inner" style="flex: 1;">
+        <a class="header-logo" href="{{ .Site.Home.Permalink }}" style="display: inline-block;">
+          {{ if .Site.Params.logo }}
+            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="height: 40px; width: auto;">
+          {{ else }}
+            {{ .Site.Title }}
+          {{ end }}
+        </a>
+      </div>
+
+      {{/* Desktop Menu - FORCE VISIBLE TEXT */}}
+      <div class="header-links" style="display: none;">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" style="margin-left: 20px; text-decoration: none; color: #333333 !important; font-weight: bold; font-size: 16px;">{{ .Name }}</a>
+        {{ end }}
+      </div>
+
+      {{/* Mobile Menu Toggle */}}
+      <div class="header-menu-mobile" style="display: block;">
+        <button class="header-menu-mobile-toggle" aria-label="Menu" style="background: none; border: none; cursor: pointer; padding: 10px;">
+          <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+          <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+          <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Responsive Visibility */
+  @media (min-width: 768px) {
+    .header-links { display: block !important; }
+    .header-menu-mobile { display: none !important; }
+  }
+
+  /* Mobile Dropdown Styling - Ensure text is visible here too */
+  .mobile-menu-open {
+    display: block !important;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 5px;
+  }
+  
+  .mobile-menu-open a {
+    display: block;
+    margin: 10px 0;
+    color: #333333 !important; /* Force black text */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  // Mobile menu toggle script
+  document.querySelector('.header-menu-mobile-toggle').addEventListener('click', function() {
+    var desktopMenu = document.querySelector('.header-links');
+    
+    // Toggle class for styling
+    if (desktopMenu.classList.contains('mobile-menu-open')) {
+        desktopMenu.classList.remove('mobile-menu-open');
+        desktopMenu.style.display = 'none'; // Hide if on desktop
+    } else {
+        desktopMenu.classList.add('mobile-menu-open');
+    }
+  });
+  
+  // Reset on resize to avoid weird state
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 768) {
+        document.querySelector('.header-links').classList.remove('mobile-menu-open');
+        document.querySelector('.header-links').style.display = 'block';
+    } else {
+         document.querySelector('.header-links').style.display = 'none';
+    }
+  });
+</script>
