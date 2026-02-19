@@ -15,7 +15,18 @@
           {{ end }}
         </div>
         <div class="header-menu-mobile">
-          {{ partial "_partials/header-mobile.html" . }}
+          {{/* Start of inlined mobile header code */}}
+          <button class="header-menu-mobile-toggle" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="header-menu-mobile-content" id="mobile-menu">
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          </div>
+          {{/* End of inlined mobile header code */}}
         </div>
       </div>
     </div>
