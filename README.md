@@ -1,2 +1,2 @@
 # blogs
-The blogs section of the HabsMUN 2026 website: [https://habsmun.com](https://blogs.habsmun.com)
+[Click here](https://blogs.habsmun.com) for the blogs section of the HabsMUN 2026 website.
