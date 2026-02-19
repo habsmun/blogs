@@ -1,79 +1,40 @@
 <header class="header">
   <div class="container">
-    <div class="header-inner">
-      
-      {{/* Logo Section - Left Aligned */}}
-      <div class="header-logo">
-        <a href="{{ .Site.Home.Permalink }}" aria-label="Home">
+    <div class="header-main">
+      <div class="header-inner">
+        
+        {{/* 1. Logo Section (Left) */}}
+        <a class="header-logo" href="{{ .Site.Home.Permalink }}">
           {{ if .Site.Params.logo }}
-            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}">
+            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" style="height: 40px; width: auto; display: block;">
           {{ else }}
             {{ .Site.Title }}
           {{ end }}
         </a>
+
+        {{/* 2. Desktop Menu Links (Right - Hidden on Mobile by Theme) */}}
+        <div class="header-links">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+
+        {{/* 3. Mobile Menu Toggle (Right - Hidden on Desktop by Theme) */}}
+        <div class="header-menu-mobile">
+          <button class="header-menu-mobile-toggle" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <div class="header-menu-mobile-content" id="mobile-menu">
+            {{ range .Site.Menus.main }}
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          </div>
+        </div>
+
       </div>
-
-      {{/* Desktop Menu - Right Aligned */}}
-      <nav class="header-links">
-        {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
-      </nav>
-
-      {{/* Mobile Menu Toggle - Hidden on Desktop */}}
-      <div class="header-menu-mobile">
-        <button class="header-menu-mobile-toggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
     </div>
   </div>
 </header>
-
-<style>
-  /* Basic Header Layout */
-  .header-inner {
-    display: flex;
-    justify-content: space-between; /* Pushes logo left, menu right */
-    align-items: center;
-    padding: 1rem 0;
-  }
-
-  /* Logo styling */
-  .header-logo img {
-    height: 40px; /* Adjust size as needed */
-    width: auto;
-    display: block;
-  }
-  
-  /* Link area fix */
-  .header-logo a {
-    display: inline-block; /* Ensures link only wraps the image */
-    text-decoration: none;
-  }
-
-  /* Desktop Menu */
-  .header-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .header-links a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-  }
-
-  /* Mobile Logic */
-  .header-menu-mobile {
-    display: none; /* Hidden by default on desktop */
-  }
-
-  @media (max-width: 768px) {
-    .header-links { display: none; } /* Hide desktop menu on mobile */
-    .header-menu-mobile { display: block; } /* Show hamburger on mobile */
-  }
-</style>
