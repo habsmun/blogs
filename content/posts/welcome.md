@@ -1,11 +1,11 @@
 +++
-title = "Welcome to HABSMUN Blogs"
-date = 2026-02-19T09:00:00Z
+title = "Welcome to HabsMUN Blogs"
+date = 2026-02-19
 draft = false
-description = "Our first blog post introducing the HABSMUN blog platform"
+description = "Our first blog post introducing the HabsMUN blog platform"
 +++
 
-Welcome to the official HABSMUN conference blog! 
+Welcome to the official HabsMUN conference blog! 
 
 This platform will feature:
 
