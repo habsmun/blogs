@@ -1,7 +1,7 @@
 baseURL = "https://blogs.habsmun.com/"
 languageCode = "en-gb"
 title = "HabsMUN Blogs"
-theme = "github.com/onweru/newsroom"
+theme = "newsroom"
 
 [params]
   description = "Official blogs from HABSMUN conferences"
