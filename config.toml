@@ -1,6 +1,6 @@
 baseURL = "https://blogs.habsmun.com/"
 languageCode = "en-gb"
-title = "HABSMUN Blogs"
+title = "HabsMUN Blogs"
 theme = "newsroom"
 
 [params]
