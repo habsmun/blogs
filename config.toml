@@ -5,7 +5,7 @@ theme = "newsroom"
 
 [params]
   description = "Official blogs from HABSMUN conferences"
-  logo = "/images/habsmunhorizontal2"
+  logo = "/images/habsmunhorizontal2.png"
 
 [markup.goldmark.renderer]
   unsafe = true
