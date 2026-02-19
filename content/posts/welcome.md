@@ -3,6 +3,7 @@ title = "Welcome to HabsMUN Blogs"
 date = 2026-02-19
 draft = false
 description = "Our first blog post introducing the HabsMUN blog platform"
+image = "/images/habsmunhorizontal2.png"
 +++
 
 Welcome to the official HabsMUN conference blog! 
