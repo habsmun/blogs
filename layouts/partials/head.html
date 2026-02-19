@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+
+{{/* FAVICON LINKS - START */}}
+<link rel="icon" type="image/png" href="{{ "images/habsmunlogo.png" | absURL }}">
+<link rel="shortcut icon" type="image/png" href="{{ "images/habsmunlogo.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "images/habsmunlogo.png" | absURL }}">
+{{/* FAVICON LINKS - END */}}
+
+{{/* Stylesheets */}}
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+{{/* RSS */}}
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
+{{/* Hugo Generator */}}
+{{ hugo.Generator }}
+
+{{/* Open Graph / Twitter Cards */}}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+{{/* Google Analytics */}}
+{{ template "_internal/google_analytics.html" . }}
