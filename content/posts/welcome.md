@@ -1,7 +1,7 @@
 +++
 title = "Welcome to HabsMUN Blogs"
 date = 2026-02-19
-draft = false
+draft = true
 description = "Temp Blog Post"
 image = "/images/splash2.png"
 +++
