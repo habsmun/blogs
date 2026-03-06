@@ -5,12 +5,12 @@ title = "Preparing Chairs for our upcoming HabsMUN Conference"
 date = 2026-03-05T00:00:00Z
 draft = false
 description = "Here's how we are preparing HabsMUN Chairs for our upcoming conference."
-image = "/images/habs_chairs.jpeg"
+image = "/images/secgens.png"
 +++
 
-**With the conference just over a week away, our chairs have been busy preparing.**
+**Meet the masterminds behind HabsMUN 2026.**
 
-Our Sec Gens are the masterminds behind HabsMUN. Here, you can read a bit more about them before you come to the conference.
+Our Sec Gens are the masterminds behind HabsMUN. Here, you can read a bit more about them and attach a face to a name before you come to the conference. It is often said that the eyes are the window to the soul, but that’s a bit useless if a Sec Gen seems to be wearing sunglasses…
 
 <u>Alexander Wasserstein</u>
 WHEN AND WHY DID YOU JOIN HABSMUN? 
