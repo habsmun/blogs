@@ -3,10 +3,10 @@ title = "Preparing Delegates for our upcoming HabsMUN Conference"
 date = 2026-03-07T00:00:00Z
 draft = false
 description = "This year, we have 97 internal delegates for HabsMUN."
-image = "/images/habs_delegates.jpeg"
+image = "/images/habs_delegates.jpg"
 +++
 
-**Here's how our intenral delegates have been preparing to put their best foot forward this weekend.**
+**Here's how our internal delegates have been preparing to put their best foot forward this weekend.**
 
 Last week, alongside my Co-Head of MUN Club, Ravjoth Brar, I delivered a workshop for our internal delegates, providing a full crash course on how to prepare effectively for HabsMUN 2026.
 
