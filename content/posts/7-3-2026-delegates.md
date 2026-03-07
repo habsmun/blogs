@@ -1,5 +1,5 @@
 +++
-title = "Preparing Delegates for our upcoming HabsMUN Conference"
+title = "Internal Delegates Prepare for HabsMUN"
 date = 2026-03-07T00:00:00Z
 draft = false
 description = "This year, we have 97 internal delegates for HabsMUN."
