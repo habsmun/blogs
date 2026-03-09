@@ -1,9 +1,9 @@
 +++
 title = "Introducing the President of the General Assembly"
-date = 2026-03-07T00:00:00Z
+date = 2026-03-09T00:00:00Z
 draft = false
 description = "Our President of GA has been busy preparing for the conference all year..."
-image = "/images/rian_preparations.jpg"
+image = "/images/rian_preparations.PNG"
 +++
 
 **Here are a few words from the President of the General Assembly.**
