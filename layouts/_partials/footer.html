@@ -1,6 +1,6 @@
-<footer class="footer wrap pale">
-  <p>&copy;&nbsp;<span class="year"></span>&nbsp;{{ site.Title }}</p>
-  <p class="attribution upcase">Managed by Anika Gupte &mdash; Head of MUN Club & HabsMUN 2026 Organising Committee</p>
+<footer class="footer wrap pale" style="display:flex; align-items:center; justify-content:space-between;">
+  <p style="margin:0;">&copy;&nbsp;<span class="year"></span>&nbsp;{{ site.Title }}</p>
+  <p class="attribution upcase" style="margin:0; font-size:0.8em;">Managed by Anika Gupte &mdash; Head of MUN Club & HabsMUN 2026 Organising Committee</p>
 </footer>
 {{ $scriptPath := "js/index.js" }}
 {{ $scripts := resources.Get $scriptPath | resources.ExecuteAsTemplate $scriptPath . | resources.Minify | resources.Fingerprint "sha512" }}
